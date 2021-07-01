@@ -23,12 +23,23 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        homePresenter = HomePresenter(delegate: self)
+//        homePresenter = HomePresenter(delegate: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        homePresenter = HomePresenter(delegate: self)
         setScreen()
+    }
+    
+    // MARK: - @IBACTIONS -
+    
+    @IBAction func profileButtonTapped(_ sender: Any) {
+        homePresenter?.pushNavigationToSettings()
+    }
+    
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        
     }
     
     //MARK:: - METHODS -
@@ -45,7 +56,7 @@ class HomeViewController: UIViewController {
         
         homePresenter?.screenTitle.subscribe(onNext: { [weak self] titleString in
             self?.title = titleString
-        }).disposed(by: homePresenter!.bag)
+        }).disposed(by: homePresenter?.bag ?? DisposeBag())
         
     }
     
@@ -55,26 +66,23 @@ class HomeViewController: UIViewController {
         homePresenter?.charactersList.bind(to: charactersTableView.rx.items(cellIdentifier: CharacterCell.cellIdentifier, cellType: CharacterCell.self)) { row, model, cell in
             cell.characterItem = model
             
-        }.disposed(by: homePresenter!.bag)
+        }.disposed(by: homePresenter?.bag ?? DisposeBag())
         
         charactersTableView.rx.modelSelected(Character.self).bind { [weak self] character in
             self?.openDetailScreen(of: character)
-        }.disposed(by: homePresenter!.bag)
+        }.disposed(by: homePresenter?.bag ?? DisposeBag())
         
         homePresenter?.fetchCharacters()
     }
     
     private func openDetailScreen(of character: Character) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        detailViewController.character = character
-        self.navigationController?.pushViewController(detailViewController, animated: true)
+        homePresenter?.pushNavigationToDetail(withCharacter: character)
     }
 }
 
 extension HomeViewController: HomeDelegate {
-    func goToDetailScreen(detailScreen: UIViewController) {
-        self.navigationController?.pushViewController(detailScreen, animated: true)
+    func pushScreen(screen: UIViewController) {
+        self.navigationController?.pushViewController(screen, animated: true)
     }
     
     func changeScreenTitle(newTitle: String) {

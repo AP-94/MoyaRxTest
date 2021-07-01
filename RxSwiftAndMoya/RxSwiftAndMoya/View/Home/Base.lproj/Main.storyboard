@@ -11,7 +11,7 @@
         <!--Swapi-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="RxSwiftAndMova" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="RxSwiftAndMoya" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gqs-go-4fC" secondAttribute="trailing" id="zgx-E7-edc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Swapi" largeTitleDisplayMode="always" id="0kM-my-JAT"/>
+                    <navigationItem key="navigationItem" title="Swapi" largeTitleDisplayMode="always" id="0kM-my-JAT">
+                        <rightBarButtonItems>
+                            <barButtonItem image="key" catalog="system" id="gWL-C2-iyY">
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" id="dfM-jT-1lG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="person.crop.circle.fill" catalog="system" id="GTJ-4e-TZK">
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="profileButtonTapped:" destination="BYZ-38-t0r" id="jZW-zc-Jea"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="charactersTableView" destination="gqs-go-4fC" id="7PD-fX-1ob"/>
                     </connections>
@@ -42,7 +57,7 @@
         <!--Detail View Controller-->
         <scene sceneID="mFe-4b-QhZ">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="DYN-80-5K3" customClass="DetailViewController" customModule="RxSwiftAndMova" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="DYN-80-5K3" customClass="DetailViewController" customModule="RxSwiftAndMoya" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pBL-Bh-Tft">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,8 +240,16 @@
     </scenes>
     <resources>
         <image name="315870342282201" width="224" height="224"/>
+        <image name="key" catalog="system" width="86" height="128"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

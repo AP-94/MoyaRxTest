@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		12AA52BB131B613861D2A61F /* Pods_RxSwiftAndMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF3F6691DE96A57F59534C /* Pods_RxSwiftAndMoya.framework */; };
+		C681E894268DA88500C95CC3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C681E893268DA88500C95CC3 /* Login.storyboard */; };
+		C681E897268DA89600C95CC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681E896268DA89600C95CC3 /* LoginViewController.swift */; };
+		C681E89A268DA8A700C95CC3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681E899268DA8A700C95CC3 /* RegisterViewController.swift */; };
+		C681E89D268DA8B000C95CC3 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681E89C268DA8B000C95CC3 /* ForgetPasswordViewController.swift */; };
+		C681E8A0268DAB1900C95CC3 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681E89F268DAB1900C95CC3 /* LoginPresenter.swift */; };
+		C681E8A4268DB03800C95CC3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681E8A3268DB03800C95CC3 /* SettingsViewController.swift */; };
+		C681E8AE268DB04000C95CC3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C681E8AD268DB04000C95CC3 /* Settings.storyboard */; };
+		C681E8B1268DB0DE00C95CC3 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681E8B0268DB0DE00C95CC3 /* SettingsPresenter.swift */; };
+		C681E8CC268DB81600C95CC3 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681E8CB268DB81600C95CC3 /* GlobalFunctions.swift */; };
 		C6DDF149268B3F10009D2137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDF148268B3F10009D2137 /* AppDelegate.swift */; };
 		C6DDF14B268B3F10009D2137 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDF14A268B3F10009D2137 /* SceneDelegate.swift */; };
 		C6DDF14D268B3F10009D2137 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDF14C268B3F10009D2137 /* HomeViewController.swift */; };
@@ -27,6 +36,15 @@
 /* Begin PBXFileReference section */
 		245873085DB27C5E29A76151 /* Pods-RxSwiftAndMoya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftAndMoya.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftAndMoya/Pods-RxSwiftAndMoya.release.xcconfig"; sourceTree = "<group>"; };
 		537DFAB7112005C409F9C474 /* Pods-RxSwiftAndMoya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftAndMoya.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftAndMoya/Pods-RxSwiftAndMoya.debug.xcconfig"; sourceTree = "<group>"; };
+		C681E893268DA88500C95CC3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C681E896268DA89600C95CC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C681E899268DA8A700C95CC3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C681E89C268DA8B000C95CC3 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		C681E89F268DAB1900C95CC3 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		C681E8A3268DB03800C95CC3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C681E8AD268DB04000C95CC3 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		C681E8B0268DB0DE00C95CC3 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		C681E8CB268DB81600C95CC3 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		C6DDF145268B3F10009D2137 /* RxSwiftAndMoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftAndMoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DDF148268B3F10009D2137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6DDF14A268B3F10009D2137 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +97,37 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C681E890268DA85A00C95CC3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C6DDF182268B50DF009D2137 /* Cells */,
+				C6DDF14E268B3F10009D2137 /* Main.storyboard */,
+				C6DDF14C268B3F10009D2137 /* HomeViewController.swift */,
+				C6DDF166268B4051009D2137 /* DetailViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C681E891268DA86500C95CC3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C681E893268DA88500C95CC3 /* Login.storyboard */,
+				C681E896268DA89600C95CC3 /* LoginViewController.swift */,
+				C681E899268DA8A700C95CC3 /* RegisterViewController.swift */,
+				C681E89C268DA8B000C95CC3 /* ForgetPasswordViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C681E8A2268DB02E00C95CC3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C681E8AD268DB04000C95CC3 /* Settings.storyboard */,
+				C681E8A3268DB03800C95CC3 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C6DDF13C268B3F10009D2137 = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +151,11 @@
 			children = (
 				C6DDF192268B7E04009D2137 /* Connection */,
 				C6DDF170268B4231009D2137 /* Utils */,
-				C6DDF160268B3FFD009D2137 /* Presenter */,
 				C6DDF15F268B3FE2009D2137 /* Model */,
+				C6DDF160268B3FFD009D2137 /* Presenter */,
 				C6DDF15E268B3FBC009D2137 /* View */,
 				C6DDF148268B3F10009D2137 /* AppDelegate.swift */,
 				C6DDF14A268B3F10009D2137 /* SceneDelegate.swift */,
-				C6DDF14E268B3F10009D2137 /* Main.storyboard */,
 				C6DDF151268B3F11009D2137 /* Assets.xcassets */,
 				C6DDF153268B3F11009D2137 /* LaunchScreen.storyboard */,
 				C6DDF156268B3F11009D2137 /* Info.plist */,
@@ -118,9 +166,9 @@
 		C6DDF15E268B3FBC009D2137 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C6DDF182268B50DF009D2137 /* Cells */,
-				C6DDF14C268B3F10009D2137 /* HomeViewController.swift */,
-				C6DDF166268B4051009D2137 /* DetailViewController.swift */,
+				C681E891268DA86500C95CC3 /* Login */,
+				C681E890268DA85A00C95CC3 /* Home */,
+				C681E8A2268DB02E00C95CC3 /* Settings */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				C6DDF169268B406B009D2137 /* HomePresenter.swift */,
+				C681E89F268DAB1900C95CC3 /* LoginPresenter.swift */,
+				C681E8B0268DB0DE00C95CC3 /* SettingsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -146,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				C6DDF171268B423B009D2137 /* Mappable.swift */,
+				C681E8CB268DB81600C95CC3 /* GlobalFunctions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -229,6 +280,8 @@
 				C6DDF155268B3F11009D2137 /* LaunchScreen.storyboard in Resources */,
 				C6DDF152268B3F11009D2137 /* Assets.xcassets in Resources */,
 				C6DDF150268B3F10009D2137 /* Main.storyboard in Resources */,
+				C681E8AE268DB04000C95CC3 /* Settings.storyboard in Resources */,
+				C681E894268DA88500C95CC3 /* Login.storyboard in Resources */,
 				C6DDF18B268B510C009D2137 /* CharacterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,14 +337,21 @@
 			files = (
 				C6DDF14D268B3F10009D2137 /* HomeViewController.swift in Sources */,
 				C6DDF172268B423B009D2137 /* Mappable.swift in Sources */,
+				C681E8A0268DAB1900C95CC3 /* LoginPresenter.swift in Sources */,
 				C6DDF179268B44C2009D2137 /* CharactersResponse.swift in Sources */,
+				C681E89A268DA8A700C95CC3 /* RegisterViewController.swift in Sources */,
 				C6DDF149268B3F10009D2137 /* AppDelegate.swift in Sources */,
 				C6DDF18A268B510C009D2137 /* CharacterCell.swift in Sources */,
 				C6DDF14B268B3F10009D2137 /* SceneDelegate.swift in Sources */,
+				C681E8A4268DB03800C95CC3 /* SettingsViewController.swift in Sources */,
+				C681E89D268DA8B000C95CC3 /* ForgetPasswordViewController.swift in Sources */,
 				C6DDF16A268B406B009D2137 /* HomePresenter.swift in Sources */,
+				C681E8B1268DB0DE00C95CC3 /* SettingsPresenter.swift in Sources */,
 				C6DDF167268B4051009D2137 /* DetailViewController.swift in Sources */,
 				C6DDF176268B4381009D2137 /* Character.swift in Sources */,
+				C681E8CC268DB81600C95CC3 /* GlobalFunctions.swift in Sources */,
 				C6DDF190268B7DF9009D2137 /* CharactersService.swift in Sources */,
+				C681E897268DA89600C95CC3 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

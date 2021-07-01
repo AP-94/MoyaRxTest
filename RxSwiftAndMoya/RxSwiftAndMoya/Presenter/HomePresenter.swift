@@ -13,7 +13,7 @@ import Moya
 
 protocol HomeDelegate: NSObjectProtocol {
     func changeScreenTitle(newTitle: String)
-    func goToDetailScreen(detailScreen: UIViewController)
+    func pushScreen(screen: UIViewController)
 }
 
 class HomePresenter: NSObject {
@@ -71,6 +71,17 @@ class HomePresenter: NSObject {
         ///Example of a observable String.
         screenTitle.onNext("Star Wars API")
         screenTitle.onCompleted()
+    }
+    
+    func pushNavigationToDetail(withCharacter: Character) {
+        let detailViewController = getViewController(viewControllerIdentifier: "DetailViewController", storyBoardName: "Main") as! DetailViewController
+        detailViewController.character = withCharacter
+        homeDelegate?.pushScreen(screen: detailViewController)
+    }
+    
+    func pushNavigationToSettings() {
+        let viewController = getViewController(viewControllerIdentifier: "SettingsViewController", storyBoardName: "Settings") as! SettingsViewController
+        homeDelegate?.pushScreen(screen: viewController)
     }
 }
 
